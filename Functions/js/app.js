@@ -84,8 +84,16 @@ let age = 35;
 
 // const getName = () => console.log('Return yok');
 
-const getName = () => {
-    console.log('Return yok');
+// const getName = () => {
+//     console.log('Return yok');
+// };
+
+// getName();
+
+const setNameSurname = (name, surname = 'soyad', age = 32) => {
+    return `Adım ${name} ${surname}. Yaşım: ${age}`;
+    // return 'Adım' + ' ' + name + ' ' + surname + ' ' + 'Yaşım:' + age;
 };
 
-getName();
+const nameSurname = setNameSurname('Korhan', 'Kösece');
+console.log(nameSurname);

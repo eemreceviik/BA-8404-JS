@@ -70,5 +70,27 @@ let metalBands = [
 //     return value.includes('f');
 // });
 
-console.log(metalBands);
+// sort
+const numbers = [1, 87, 54, 42, 99, 2, 103, 114, -5, -12, 0];
+// const result = metalBands.sort();
+// const result = numbers.sort((number1, number2) => {
+//     console.log('number1', number1);
+//     console.log('number2', number2);
+//     console.log('cons', number1 - number2);
+//     return number2 - number1;
+// });
+
+// console.log(metalBands);
+// reduce
+
+const getSum = (total, number) => {
+    return total + number;
+};
+
+const result = numbers.reduce(getSum, 0);
+// const result = numbers.reduce((total, number) => {
+//     return total + number;
+// }, 0);
+
+// console.log(numbers);
 console.log(result);

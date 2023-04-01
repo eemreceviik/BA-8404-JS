@@ -5,8 +5,8 @@ let laptop = {
 };
 
 // DOT NOTATION
-// const size = laptop.sizeInch
-// laptop.sizeInch = 13
+// const size = laptop.sizeInch;
+// laptop.sizeInch = 13;
 // laptop.hasRgb = true;
 
 // BRACKET NOTATION
@@ -112,7 +112,7 @@ const result = Object.entries(motorcyle);
 // }
 
 // for (const key in motorcyle) {
-//     // console.log(item);
+//     console.log(key);
 //     console.log(motorcyle[key])
 // }
 

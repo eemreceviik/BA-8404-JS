@@ -227,7 +227,7 @@ const renderSuppliers = async () => {
         const trElement = `<tr>
             <td>${supplier.companyName}</td>                        
             <td>${supplier.contactName}</td>                        
-            <td ${region === 'null' ? "style=color:red" : null}>${
+            <td ${region === 'null' ? 'style=color:red' : null}>${
             supplier.address.country ? supplier.address.country : 'BOŞ'
         }</td>                        
            </tr>`;
@@ -236,4 +236,88 @@ const renderSuppliers = async () => {
     });
 };
 
-renderSuppliers();
+// renderSuppliers();
+
+// const button = document.querySelector('button');
+// const table = document.querySelector('table');
+
+// let tableStatus = false;
+// button.addEventListener('click', (event) => {
+//     console.log('clicklendi');
+
+//     // if (!tableStatus) {
+//     //     renderSuppliers();
+//     //     tableStatus = true;
+//     // } else {
+//     //     table.innerHTML = '';
+//     //     tableStatus = false;
+//     // }
+
+//     // console.log(event);
+//     console.log(event.target);
+//     // console.log(button);
+// });
+
+// const items = document.querySelectorAll('li');
+
+// console.log(items);
+
+// items.forEach((item) => {
+//     item.addEventListener('click', (e) => {
+//         console.log(e);
+//         e.target.style.textDecoration = 'line-through';
+//         console.log(item);
+//         // e.target.remove();
+//     });
+// });
+
+// EVENT BUBBLING VE EVENT DELEGATION
+
+// const button = document.querySelector('button');
+// const items = document.querySelectorAll('li');
+// const ul = document.querySelector('ul');
+// const div = document.querySelector('div');
+
+// button.addEventListener('click', () => {
+//     const li = document.createElement('li');
+//     li.textContent = 'Audio Slave';
+//     ul.append(li);
+// });
+
+// items.forEach((item) => {
+//     item.addEventListener('click', (e) => {
+//         console.log('event in LI');
+//         e.target.style.textDecoration = 'line-through';
+//     });
+// });
+
+// ul.addEventListener('click', (e) => {
+//     console.log('event in UL');
+//     console.log(e.target);
+//     // console.log(e.target.tagName);
+
+//     e.stopPropagation();
+//     if (e.target.tagName === 'LI') {
+//         e.target.style.color = '#FFF';
+//     }
+// });
+
+// div.addEventListener('click', () => {
+//     console.log('event in DIV');
+// });
+
+const button = document.querySelector('button');
+const input = document.querySelector('input');
+const brandsSelect = document.querySelector('#brands');
+
+button.addEventListener('click', () => {
+    // console.dir(input);
+    console.log(input.value);
+    console.log(brandsSelect.value);
+});
+
+brandsSelect.addEventListener('change', (e) => {
+    console.log('changed');
+    console.log(e.target.value);
+    alert(e.target.value)
+});
